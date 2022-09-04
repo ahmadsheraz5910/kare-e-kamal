@@ -4,11 +4,30 @@ export const Content = {
         section:{
             title:"Payment Details",
             payment_options:[{
-                bank_name:"Allied Bank",
-                account_number:"PK102312312313124141414124",
-                account_title:"Kare-e-Kamal (Source)",
-                copy_to_clipboard:"PK102312312313124141414124"
-            }]
+                payment_type:"Bank Account",
+                copy_this:"6110239539800018",
+                copying_type:"account no",
+                sub_info:["Bank of Punjab", "Kare-e-Kamal (Source)"],
+            },
+            {
+                payment_type:"Jazz Cash",
+                copy_this:"03134707211",
+                copying_type:"mobile no",
+                sub_info:["Umair"],
+            },
+            {
+                payment_type:"Jazz Cash/Easy Paisa",
+                copy_this:"03252030049",
+                copying_type:"mobile no",
+                sub_info:["Abdullah Nezami"],
+            },
+            {
+                payment_type:"Easy Paisa",
+                copy_this:"03356712455",
+                copying_type:"mobile no",
+                sub_info:["Omer Mansoor"],
+            }
+            ]
         }
     }
 }

@@ -6,7 +6,7 @@ interface Props extends React.ComponentPropsWithoutRef<"svg"> {
 const getClassBySize = (size:Size) => {
     switch(size) {
         case 'small':
-            return "w-5 h-5"
+            return "w-4 h-4"
         case 'large':
             return "w-7 h-7"
         default:
