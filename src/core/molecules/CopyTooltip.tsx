@@ -1,36 +1,48 @@
 import CircularProgress from '@mui/material/CircularProgress'
-import React from 'react'
-import { CheckIcon, ClipboardIcon } from '../icons'
-
+import React, { ReactNode } from 'react'
+import { CheckIcon, SquareToStack } from '../icons'
+export type copying_status = "copying" | "copied" | "not copied"
 type Props = {
-    status?:"copying" | "copied" | "not copied"
+    status?:copying_status
 }
 
 const CopyTooltip = ({status = "not copied"}: Props) => {
+
+    
+
     const renderByStatus = (() => {
         switch(status) {
             case 'copied':
                 return {
-                    text:"Copied to Clipboard", 
-                    icon:<CheckIcon className = "stroke-[#58AAB0]" />        
+                    text:<p 
+                        className='leFadeInLeft' 
+                        style = {{
+                            animationDuration:"0.5s"
+                        }}>
+                            {"Copied to Clipboard"}
+                        </p>, 
+                    icon:<CheckIcon className = "stroke-[#58AAB0] elevateLeft" style = {{
+                        animationDuration:"0.5s", 
+                        animationDelay:"0.5s",
+                    }} />        
                 }
             case 'copying':
                 return {
-                    text:"Copying...",
+                    text:<p>{"Copying..."}</p>,
                     icon:<CircularProgress size = {12} sx  = {{color:"#58AAB0"}} />
                 }
             default:
                 return {
-                    text:"Click to Copy", 
-                    icon:<ClipboardIcon className = "stroke-[#58AAB0]" />
+                    text:<p>{"Click to Copy"}</p>, 
+                    icon:<SquareToStack  className = "stroke-[#58AAB0]" />
                 }
         }
     })()
     
     return (
-    <div className = "py-2 px-1 flex items-center space-x-3">
+    <div className = {`py-2 px-1 flex items-center space-x-2 text-sm font-medium text-green-50`}>
         {renderByStatus.icon}
-        <p className = "text-xs text-slate-200">{renderByStatus.text}</p>
+        {renderByStatus.text}
     </div>
   )
 }

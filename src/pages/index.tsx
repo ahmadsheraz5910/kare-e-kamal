@@ -1,19 +1,25 @@
 import { Tooltip } from '@mui/material'
 import type { NextPage } from 'next'
 import { Content } from '../core/content'
-import CopyTooltip from '../core/molecules/CopyTooltip';
-import { useEffect, useState } from 'react';
-import copy from 'copy-to-clipboard';
-
+import CopyTooltip, { copying_status } from '../core/molecules/CopyTooltip';
+import { useEffect, useRef, useState } from 'react';
+import copy from 'clipboard-copy'
 const Home: NextPage = () => {
+  const value_to_copy = useRef(Content.index.section.payment_options[0].copy_to_clipboard)
+  const [copying_status, setCopyingStatus] = useState<copying_status>('not copied')
 
-  const [details_copied, setDetailsCopied] = useState(false)
+  const copy_to_clipboard = async (value:string) => {
+    setCopyingStatus('copying')
+    try {
+      copy(value)
+      setCopyingStatus('copied')
+    }catch(e) {
+      setCopyingStatus('not copied')
+    }
+  }
+
   useEffect(() => {
-    // Copy with options
-    copy('Text', {
-      debug: true,
-      message: 'Press #{key} to copy',
-    });
+    //copy_to_clipboard(value_to_copy.current)
   }, [])
 
 
@@ -28,8 +34,10 @@ const Home: NextPage = () => {
             <Tooltip 
               componentsProps={{
                 tooltip:{
+                  //className:"animate-bounce",
                   sx: {
-                    backgroundColor:'#183643'
+                    backgroundColor:'#183643',
+                    
                   } 
                 },
                 arrow:{
@@ -42,12 +50,15 @@ const Home: NextPage = () => {
               placement='top-end' 
               open={true} 
               title={
-                <CopyTooltip status='copying' />
+                <CopyTooltip status={copying_status} />
               } 
               arrow
               key = {idx}
             >
-              <div className = "max-w-md my-4 p-4 border rounded-md shadow-md bg-slate-50 text-gray-700 cursor-pointer hover:bg-slate-100">
+              <div 
+                className = "max-w-md my-4 p-4 border rounded-md shadow-md bg-slate-50 text-gray-700 cursor-pointer hover:bg-slate-100"
+                onClick = {() => copy_to_clipboard(value_to_copy.current)}
+              >
                 <div style = {{gridTemplateColumns:"0.4fr 0.6fr"}} className = "grid grid-flow-col">
                   <p className=  "font-medium">{"Account Number"}</p>
                   <p>{option.account_number}</p>
