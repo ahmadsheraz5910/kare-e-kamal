@@ -19,7 +19,7 @@ const Home: NextPage = () => {
   }
 
   useEffect(() => {
-    //copy_to_clipboard(value_to_copy.current)
+    copy_to_clipboard(value_to_copy.current)
   }, [])
 
 
