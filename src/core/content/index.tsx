@@ -8,7 +8,7 @@ export const Content = {
                 payment_type:"Bank Account",
                 copy_this:"6110239539800018",
                 copying_type:"account no",
-                sub_info:["Bank of Punjab", "Kare-e-Kamal (Source)"],
+                sub_info:["Acc. Title: Hafiz Umair Ahmad","Bank of Punjab", "Kare-e-Kamal (Source)"],
             },
             // {
             //     payment_type:"Jazz Cash",
