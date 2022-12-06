@@ -17,9 +17,9 @@ const Home: NextPage = () => {
     }
   },[])
 
-  useEffect(() => {
-    copy_to_clipboard(Content.index.section.payment_options[0].copy_this, 0)
-  }, [copy_to_clipboard])
+  // useEffect(() => {
+  //   copy_to_clipboard(Content.index.section.payment_options[0].copy_this, 0)
+  // }, [copy_to_clipboard])
 
 
   return (
