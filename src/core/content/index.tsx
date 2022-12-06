@@ -1,6 +1,6 @@
 export const Content = {
     index:{
-        title:"Kare-e-Kamal",
+        title:"Kaar-e-Kamal ITU Chapter",
         section:{
             title:"Payment Details",
             payment_options:[
@@ -10,12 +10,12 @@ export const Content = {
                 copying_type:"account no",
                 sub_info:["Acc. Title: Hafiz Umair Ahmad","Bank of Punjab", "Kare-e-Kamal (Source)"],
             },
-            // {
-            //     payment_type:"Jazz Cash",
-            //     copy_this:"03134707211",
-            //     copying_type:"mobile no",
-            //     sub_info:["Umair"],
-            // },
+//             {
+//                 payment_type:"Jazz Cash",
+//                 copy_this:"03134707211",
+//                 copying_type:"mobile no",
+//                 sub_info:["Umair"],
+//             },
             {
                 payment_type:"Jazz Cash/Easy Paisa",
                 copy_this:"03252030049",
