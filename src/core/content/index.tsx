@@ -1,7 +1,6 @@
 export const Content = {
     index:{
         title:"Kare-e-Kamal",
-        banner:"Total Amount Collected: ____  | Amount Left: ____ ",
         section:{
             title:"Payment Details",
             payment_options:[
@@ -9,14 +8,14 @@ export const Content = {
                 payment_type:"Bank Account",
                 copy_this:"6110239539800018",
                 copying_type:"account no",
-                sub_info:["Bank of Punjab", "Kare-e-Kamal (Source)"],
+                sub_info:["Acc. Title: Hafiz Umair Ahmad","Bank of Punjab", "Kare-e-Kamal (Source)"],
             },
-            // {
-            //     payment_type:"Jazz Cash",
-            //     copy_this:"03134707211",
-            //     copying_type:"mobile no",
-            //     sub_info:["Umair"],
-            // },
+             {
+                 payment_type:"SadaPay",
+                 copy_this:"03024755039",
+                 copying_type:"mobile no",
+                 sub_info:["Muhammad Affan Wahid"],
+             },
             {
                 payment_type:"Jazz Cash/Easy Paisa",
                 copy_this:"03252030049",
