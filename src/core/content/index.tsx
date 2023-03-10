@@ -1,6 +1,7 @@
 export const Content = {
     index:{
         title:"Kare-e-Kamal",
+        banner:"Total Amount Collected: ____  | Amount Left: ____ ",
         section:{
             title:"Payment Details",
             payment_options:[
