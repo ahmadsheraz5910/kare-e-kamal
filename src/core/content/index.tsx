@@ -1,7 +1,6 @@
 export const Content = {
     index:{
         title:"Kare-e-Kamal",
-        banner:"Amount Collected: __ ",
         section:{
             title:"Payment Details",
             payment_options:[
@@ -12,7 +11,7 @@ export const Content = {
                 sub_info:["Acc. Title: Hafiz Umair Ahmad","Bank of Punjab", "Kare-e-Kamal (Source)"],
             },
              {
-                 payment_type:"SadaPay",
+                 payment_type:"Nayapay",
                  copy_this:"03024755039",
                  copying_type:"mobile no",
                  sub_info:["Muhammad Affan Wahid"],
